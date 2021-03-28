@@ -22,25 +22,25 @@ var remainsec;
 localStorage["HighestScore"]=0;
 
 function preload(){
-  trex_running = loadAnimation("Sprites/trex1.png","Sprites/trex2.png","Sprites/trex3.png");
-  trex_collided = loadImage("Sprites/trex_collided.png");
+  trex_running = loadAnimation("trex1.png","trex2.png","trex3.png");
+  trex_collided = loadImage("trex_collided.png");
 
-  groundImage = loadImage("Sprites/ground2.png")
-  cloudImages = loadImage("Sprites/cloud.png");
+  groundImage = loadImage("ground2.png")
+  cloudImages = loadImage("cloud.png");
   
-  obstacleImages1 = loadImage("Sprites/obstacle1.png");
-  obstacleImages2 = loadImage("Sprites/obstacle2.png");
-  obstacleImages3 = loadImage("Sprites/obstacle3.png");
-  obstacleImages4 = loadImage("Sprites/obstacle4.png");
-  obstacleImages5 = loadImage("Sprites/obstacle5.png");
-  obstacleImages6 = loadImage("Sprites/obstacle6.png");
+  obstacleImages1 = loadImage("obstacle1.png");
+  obstacleImages2 = loadImage("obstacle2.png");
+  obstacleImages3 = loadImage("obstacle3.png");
+  obstacleImages4 = loadImage("obstacle4.png");
+  obstacleImages5 = loadImage("obstacle5.png");
+  obstacleImages6 = loadImage("obstacle6.png");
   
-  gameOverImage = loadImage("Sprites/gameOver.png");
-  restartImage = loadImage("Sprites/restart.png");
+  gameOverImage = loadImage("gameOver.png");
+  restartImage = loadImage("restart.png");
 
-  die = loadSound("Assets/die.mp3");
-  jump = loadSound("Assets/jump.mp3");
-  check = loadSound("Assets/checkPoint.mp3");
+  die = loadSound("die.mp3");
+  jump = loadSound("jump.mp3");
+  check = loadSound("checkPoint.mp3");
 }
 
 function setup() {
@@ -202,22 +202,22 @@ function spawnObstacles() {
     var rand = Math.round(random(1,6));
     
     switch(rand){
-      case 1: obstacle.addImage("Sprites/obstacle1", obstacleImages1);
+      case 1: obstacle.addImage("obstacle1", obstacleImages1);
         break;
         
-      case 2: obstacle.addImage("Sprites/obstacle2",obstacleImages2);
+      case 2: obstacle.addImage("obstacle2",obstacleImages2);
         break;
         
-      case 3: obstacle.addImage("Sprites/obstacle3",obstacleImages3);
+      case 3: obstacle.addImage("obstacle3",obstacleImages3);
         break;
         
-      case 4: obstacle.addImage("Sprites/obstacle4",obstacleImages4);
+      case 4: obstacle.addImage("obstacle4",obstacleImages4);
         break;
         
-      case 5: obstacle.addImage("Sprites/obstacle5",obstacleImages5);
+      case 5: obstacle.addImage("obstacle5",obstacleImages5);
         break;
         
-      case 6: obstacle.addImage("Sprites/obstacle6",obstacleImages6);
+      case 6: obstacle.addImage("obstacle6",obstacleImages6);
         break;
         
       default: break; 
@@ -230,5 +230,3 @@ function spawnObstacles() {
     GroupObstacles.add(obstacle);
   }
 }
-
-  
